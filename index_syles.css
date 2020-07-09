@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Fondamento:ital@1&display=swap');
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: gray;
+}
+.container{
+    width: 800px;
+    height: 600px;
+    border: 1px solid red;
+    border-radius: 15px;
+    padding: 20px;
+    padding-top: 50px;
+    overflow: hidden;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+.container h2{
+    text-align: center;
+    color: coral;
+    text-transform: uppercase;
+}
+.container #headingspan{
+    text-align: end;
+    color: blue;
+    position: relative;
+    left: 60%;
+    font-family: 'Fondamento', cursive;
+    font-size: 18px;
+}
+.container .form-input,
+.container .form-group{
+    padding: 15px;
+    padding-left: 0;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.container .form-input input{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    padding-left: 0px;
+    font-size: 20px;
+    font-weight: 500;
+    outline: none;
+    letter-spacing: 1px;
+    color: darkgray;
+    border: none;
+}
+
+.container p{
+    text-align: center;
+    color: red;
+    font-size: 18px;
+}
+
+.container  .form-input label{
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid black;
+}
+.container .form-input label::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px solid dodgerblue;
+    left: 0;
+    bottom: 0;
+    transform: translateX(-110%);
+    transition: all 1s ease;
+}
+
+.container .form-input label span{
+    position: absolute;
+    bottom: 6px;
+    font-size: 20px;
+    left: 0;
+    transition: all 0.5s ease;
+}
+
+.container .form-input input:focus~label span,
+.container .form-input input:valid~label span{
+    transform: translateY(-35px);
+    color: dodgerblue;
+    font-size: 16px;
+}
+
+.container .form-input input:focus~label::after,
+.container .form-input input:valid~label::after{
+    transform: translateX(0%);
+}
+
+.container .form-input input:focus~label,
+.container .form-input input:valid~label{
+    border-bottom: 1px solid dodgerblue;
+}
+
+.container .form-group ul{
+    list-style-type: none;
+    padding: 10px;
+}
+.container .form-group ul li input{
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.container .form-group ul li input:checked~label::after{
+    transform: translateX(0%);
+}
+
+.container .form-group ul li i{
+    font-size: 20px;
+    color: dimgray;
+    padding-left: 15px;
+    position: relative;
+    top: -2px;
+    cursor: pointer;
+    transition:all 0.8s;
+    transform: translateX(-1500%);
+}
+
+.container .form-group ul li input:checked~i{
+    transform: translateX(0%);
+}
+
+
+.container .form-group ul li label{
+    font-size: 20px;
+    position: relative;
+    bottom: -15px;
+    left: 8px;
+    cursor: pointer;
+    color: chocolate;
+    font-family: 'Fondamento', cursive;
+    overflow: hidden;
+    font-weight: 700;
+}
+
+.container .form-group ul li input:checked~label{
+    color: gray;
+    font-weight: 400;
+}
+
+.container .form-group ul li label::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px solid dimgray;
+    left: 0;
+    bottom: 13px;
+    transform: translateX(-100%);
+    transition: all 0.5s;
+}
