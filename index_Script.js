@@ -8,7 +8,7 @@ function getalltodos() {
     if (typeof (Storage) !== "undefined") {
         if (localStorage.getItem("tdcount")) {
             todocount = localStorage.getItem("tdcount")
-            for (var i = 1; i <= todocount; i++) {
+            for (var i = 1; i < todocount; i++) {
                 var li = document.createElement("li")
                 var input = document.createElement('input')
                 input.type = "checkbox"
