@@ -63,6 +63,7 @@ function remember(bool) {
                 }
                 todocount++
                 localStorage.setItem('tdcount', todocount)
+                document.getElementById('mywork').value = ''
             }
             else {
                 document.getElementById("errormsg").innerHTML = "Sorry, your browser does not support Web Storage...";
