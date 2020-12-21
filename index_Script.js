@@ -45,7 +45,7 @@ function remember(bool) {
                 // Store
                 localStorage.setItem(todocount, todo);
                 // Retrieve
-                for (var i = 1; i < todocount; i++) {
+                for (var i = 1; i <= todocount; i++) {
                     var li = document.createElement("li")
                     var input = document.createElement('input')
                     input.type = "checkbox"
@@ -63,6 +63,7 @@ function remember(bool) {
                 }
                 todocount++
                 localStorage.setItem('tdcount', todocount)
+                document.getElementById('mywork').value = ''
             }
             else {
                 document.getElementById("errormsg").innerHTML = "Sorry, your browser does not support Web Storage...";
